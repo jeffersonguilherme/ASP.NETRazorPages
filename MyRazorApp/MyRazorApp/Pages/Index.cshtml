@@ -1,8 +1,6 @@
 ﻿@page
 @model MyRazorApp.Pages.IndexModel
-@{
-    Layout = null;
-}
+
 
 <!DOCTYPE html>
     <html>
@@ -12,17 +10,12 @@
     <body>
 
         <div>
-        @for (var i = 0; i <= 10; i++)
-        {
-            <div id={@i}>
 
-                <h1>Titulo @i</h1>
-                <p>Lorem</p>
-
-            </div>
+        @foreach (var item:Category in Model.Categories){
             
         }
-    </div>
+
+        </div>
     
     </body>
     </html>
