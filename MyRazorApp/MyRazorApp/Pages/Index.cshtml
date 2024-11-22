@@ -1,0 +1,28 @@
+﻿@page
+@model MyRazorApp.Pages.IndexModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+        <div>
+        @for (var i = 0; i <= 10; i++)
+        {
+            <div id={@i}>
+
+                <h1>Titulo @i</h1>
+                <p>Lorem</p>
+
+            </div>
+            
+        }
+    </div>
+    
+    </body>
+    </html>
