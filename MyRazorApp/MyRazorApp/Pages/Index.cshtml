@@ -10,10 +10,27 @@
     <body>
 
         <div>
+        
+            <table>
+                <tehad>
+                   <tr>
+                    <td>Id</td>
+                    <td>Title</td>
+                    <td>Price</td>
+                   </tr>
+                </tehad>
+                <tbody>
+                    
+                @foreach (var category in Model.Categories) {
+                    <tr>
+                        <td>@category.Id</td>
+                        <td>@category.Title</td>
+                        <td>@category.Price.ToString(format:"C")</td>
+                    </tr>
+                }
+                </tbody>
+            </table>  
 
-        @foreach (var item:Category in Model.Categories){
-            
-        }
 
         </div>
     

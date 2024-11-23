@@ -7,15 +7,23 @@ namespace MyRazorApp.Pages
     {
         public List<Category> Categories { get; set; } = new();
         public async Task OnGet() {
+
             await Task.Delay(5000);
             for(int i = 0; i <= 100; i++) {
                 Categories.Add(
-                    item:new Category(i,
+                    new Category(i,
                     Title:$"Categoria {i}",
-                    Price: i*18.95M)
-                    );
+                    Price:i*18.95M));
             }
+
         }
+
+
+        public record Category(
+            int Id,
+            string Title,
+            decimal Price);
     }
-    public record Category(int Id, string Title, decimal Price);
 }
+    
+
